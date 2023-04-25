@@ -20,15 +20,20 @@ function App() {
 
   return (
     <div className="App">
+    {/* FilterMovie component for filtering movies */}
     <FilterMovie setSearch={setSearch} />
+    {/* Conditional rendering based on search value */}
     {search === "" ? (
+      // Render ListMovies component if search query is empty
       <ListMovies Movies={movie} search={search} />
     ) : (
+      // Render FiltredList and FiltredListt components if search  is not empty
       <div>
         <FiltredList Movies={movie} search={search} />
         <FiltredListt Movies={movie} search={search} />
       </div>
     )}
+    {/* AddMovie component for adding new movies */}
     <AddMovie add={add} />
   </div>
 )}
