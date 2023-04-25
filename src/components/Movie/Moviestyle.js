@@ -12,7 +12,7 @@ function Movie({Movie}) {
           <div class="content">
             <div >
               <h2>{Movie.name}<br/><span>{Movie.description}</span></h2>
-              <button class="custom-btn btn-12"><span>Play</span><span>Watch now</span></button>
+              <a href={Movie.trailer} class="custom-btn btn-12"><span>Play</span><span>Watch now</span></a>
             </div>
            
           </div>
