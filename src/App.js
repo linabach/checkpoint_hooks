@@ -16,7 +16,7 @@ function App() {
   const [search, setSearch]=useState("");
 
 
-  const add = (newMovie) => {setMovie([newMovie, ...movie ])}
+  const add = (newMovie) => {setMovie([ ...movie, newMovie ])}
 
   return (
     <div className="App">

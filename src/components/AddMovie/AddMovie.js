@@ -13,6 +13,7 @@ function AddMovie({add}) {
   const [imgSrc , setImgSrc] = useState("");
   const [description , setDescription] = useState("");
   const [rate , setRate] = useState("");
+  const [trailer , setTrailer] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value)
@@ -26,9 +27,12 @@ function AddMovie({add}) {
   const handleRate = (e) => {
     setRate(e.target.value)
   }
+  const handleTrailer = (e) => {
+    setTrailer(e.target.value)
+  }
   
   const handleAdd = () => {
-    let newMovie ={ name , imgSrc , description , rate}
+    let newMovie ={ name , imgSrc , description , rate , trailer}
     add(newMovie)
   }
 
@@ -71,6 +75,13 @@ function AddMovie({add}) {
             >
               <Form.Label>Rate</Form.Label>
               <Form.Control as="textarea" rows={1} onChange={(e)=> handleRate(e)}  value={rate}/>
+            </Form.Group>
+            <Form.Group
+              className="mb-3"
+              controlId="exampleForm.ControlTextarea1"
+            >
+              <Form.Label>Trailer</Form.Label>
+              <Form.Control as="textarea" rows={1} onChange={(e)=> handleTrailer(e)}  value={trailer}/>
             </Form.Group>
           </Form>
           
