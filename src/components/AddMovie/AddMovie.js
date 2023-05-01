@@ -38,7 +38,7 @@ function AddMovie({add}) {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} style={{backgroundColor:"rgb(1, 5, 53)", marginTop:"80px",marginBlockStart:"80px" , marginLeft:"720px" , color:"rgb(222, 0, 0)"}}>
+      <Button variant="primary" onClick={handleShow} style={{backgroundColor:"transparent", marginTop:"80px",marginBlockStart:"80px" , marginLeft:"720px" , color:"white", width:"200px", borderRadius:"25px", marginBottom:"30px"}}>
         Add a movie
       </Button>
 
